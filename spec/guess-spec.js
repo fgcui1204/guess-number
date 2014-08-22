@@ -3,7 +3,7 @@
  */
 describe('guess', function () {
     var inputs='1234';
-    it('it should is number', function () {
+    it('guess number is ok', function () {
         var answerGen = new AnswerGenerrator();
         spyOn(answerGen,'isNumbers').and.returnValue('1234');
         var compare=new CompareNumber();
