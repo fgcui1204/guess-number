@@ -8,6 +8,7 @@ function Game(guess) {
 }
 Game.prototype.start = function () {
     this.answer = this.guess.generator.isNumbers();
+    console.log(this.answer);
     this.number = 6;
     var str = "welcome to you";
     return str;
@@ -22,14 +23,12 @@ Game.prototype.judge = function (input) {
         if (sub.indexOf(cha) != -1) {
             console.log("有重复");
             return false;
-        }
-        ;
-    }
-    ;
+        };
+    };
     return true;
 }
 Game.prototype.judgeNumber = function (input) {
-    var isNumber = /^\d{4}$/;
+    var isNumber = /^[0-9]\d*|0$/;
     return isNumber.test(input);
 }
 Game.prototype.judgeAnswer = function (input) {
