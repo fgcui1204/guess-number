@@ -32,10 +32,17 @@ Game.prototype.judgeNumber = function (input){
 }
 Game.prototype.judgeAnswer = function (input){
     var flag=this.guess.guessnumber(input);
-    console.log(this.answer);
     if(this.answer == input){
         return "Congratulations";
     }else{
         return flag;
+    }
+}
+Game.prototype.subNumber = function (){
+    this.number--;
+    if(this.number == 0){
+        return "GameOver";
+    }else{
+        return this.number;
     }
 }
