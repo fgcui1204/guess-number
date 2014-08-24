@@ -2,18 +2,41 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <!--add css file-->
+    <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.css"/>
+    <!--add js file-->
+    <script src="lib/jquery-2.1.1/jquery-2.1.1.js"></script>
+    <script src="lib/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    <script src="src/index.js"></script>
+    <script type="text/javascript" src="src/compareNumber.js"></script>
+    <script type="text/javascript" src="src/answerGenerrator.js"></script>
+    <script type="text/javascript" src="src/guess.js"></script>
+    <script type="text/javascript" src="src/game.js"></script>
+
 </head>
 <body>
+<div class="container">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <p class="text-center h2">数字游戏</p>
+    </nav>
+    <div class="jumbotron">
+        <p>游戏规则：</p>
 
-<h1>数字游戏</h1>
+        <p>fadsfads</p>
 
-<form>
-    <div id="message"></div>
-    <input type="number" id="input">
-    <button>提交</button>
-    <br>
-    <button id="start" onclick="start();">开始</button>
-</form>
+        <div class="text-center gameArea">
+            <label>请输入四个不同的数字：</label>
+
+            <div>
+                <label><input type="text" id="input"/></label>
+                <a class="btn btn-primary btn-sm submitBtn" role="button">提交</a>
+            </div>
+        </div>
+        <div class="text-center">
+            <p><a class="btn btn-primary btn-lg startBtn" role="button">开始</a></p>
+        </div>
+    </div>
+
+</div>
 </body>
 </html>
