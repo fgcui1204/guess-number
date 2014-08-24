@@ -13,36 +13,38 @@ Game.prototype.start = function () {
     return str;
 }
 Game.prototype.judge = function (input) {
-    if(input.length != 4){
+    if (input.length != 4) {
         return false;
     }
     for (var i = 0; i < input.length; i++) {
         var cha = input.charAt(i);
-        var sub = input.substring(0,i)+input.substring(i+1);
-        if (sub.indexOf(cha)!=-1) {
+        var sub = input.substring(0, i) + input.substring(i + 1);
+        if (sub.indexOf(cha) != -1) {
             console.log("有重复");
             return false;
-        };
-    };
+        }
+        ;
+    }
+    ;
     return true;
 }
-Game.prototype.judgeNumber = function (input){
-    var isNumber=/^\d{4}$/;
+Game.prototype.judgeNumber = function (input) {
+    var isNumber = /^\d{4}$/;
     return isNumber.test(input);
 }
-Game.prototype.judgeAnswer = function (input){
-    var flag=this.guess.guessnumber(input);
-    if(this.answer == input){
+Game.prototype.judgeAnswer = function (input) {
+    var flag = this.guess.guessnumber(input);
+    if (this.answer == input) {
         return "Congratulations";
-    }else{
+    } else {
         return flag;
     }
 }
-Game.prototype.subNumber = function (){
+Game.prototype.subNumber = function () {
     this.number--;
-    if(this.number == 0){
+    if (this.number == 0) {
         return "GameOver";
-    }else{
+    } else {
         return this.number;
     }
 }
