@@ -10,9 +10,9 @@ Game.prototype.start = function () {
     this.answer = this.guess.generator.isNumbers();
     console.log(this.answer);
     this.number = 6;
-    var str = "welcome to you";
-    return str;
-}
+    var string = "welcome to you";
+    return string;
+};
 Game.prototype.judge = function (input) {
     if (input.length != 4) {
         return false;
@@ -23,14 +23,14 @@ Game.prototype.judge = function (input) {
         if (sub.indexOf(cha) != -1) {
             console.log("有重复");
             return false;
-        };
-    };
+        }
+    }
     return true;
-}
+};
 Game.prototype.judgeNumber = function (input) {
-    var isNumber = /^[0-9]\d*|0$/;
+    var isNumber = /^\d+$/;
     return isNumber.test(input);
-}
+};
 Game.prototype.judgeAnswer = function (input) {
     var flag = this.guess.guessnumber(input);
     if (this.answer == input) {
@@ -38,7 +38,7 @@ Game.prototype.judgeAnswer = function (input) {
     } else {
         return flag;
     }
-}
+};
 Game.prototype.subNumber = function () {
     this.number--;
     if (this.number == 0) {
@@ -46,4 +46,4 @@ Game.prototype.subNumber = function () {
     } else {
         return this.number;
     }
-}
+};
